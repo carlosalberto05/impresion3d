@@ -1,14 +1,10 @@
-import Header from "./Header";
-import Body from "./Body";
-import Footer from "./Footer";
+import AppRouter from "./components/routers/AppRouter";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Body />
-      <Footer />
+      <AppRouter />
     </div>
   );
 }
