@@ -32,10 +32,6 @@ const NavbarTop = () => {
             Envíanos un mensaje a Facebook
           </a>
         </Navbar.Text>
-        <Navbar.Text>
-          <FontAwesomeIcon icon={faCartPlus} className="mr-2" />
-          Carrito
-        </Navbar.Text>
       </Container>
     </Navbar>
   );

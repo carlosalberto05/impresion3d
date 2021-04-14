@@ -1,25 +1,50 @@
-import React from "react";
-import { Jumbotron, CardColumns, Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { CardColumns, Card, Container, Modal, Image } from "react-bootstrap";
+import { galeria } from "../../../data/galeria";
 
 const Galeria = () => {
+  const [imagen, setImagen] = useState([]);
+  const [show, setShow] = useState(false);
+  console.log(imagen.id);
+
+  const handleShow = (id) => {
+    const arrayFiltrado = galeria.filter((item) => item.id === id);
+    setImagen(...arrayFiltrado);
+    setShow(true);
+  };
+
+  const handleClose = () => {
+    setShow(false);
+  };
+
   return (
     <>
-      <h4 className="text-center">Galería</h4>
-      <Jumbotron>
+      <h2 className="text-center">Galería</h2>
+      <Container>
         <CardColumns>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          {galeria.map(({ id }) => {
+            return (
+              <Card key={id}>
+                <Card.Img
+                  variant="top"
+                  src={`../../../assets/galeria/${id}.jpg`}
+                  onClick={() => handleShow(id)}
+                />
+              </Card>
+            );
+          })}
+
+          <Modal show={show} onHide={handleClose} centered>
+            <Modal.Dialog>
+              <Image
+                src={`../../../assets/galeria/${imagen.id}.jpg`}
+                fluid
+                rounded
+              />
+            </Modal.Dialog>
+          </Modal>
         </CardColumns>
-      </Jumbotron>
+      </Container>
     </>
   );
 };

@@ -18,7 +18,7 @@ const NavbarMain = () => {
             Inova3D
           </Link>
 
-          <Nav className="mr-auto">
+          <Nav className="ml-auto">
             <NavLink
               activeClassName="active"
               className="nav-item nav-link"
@@ -46,10 +46,6 @@ const NavbarMain = () => {
               Otros
             </NavLink>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-primary">Search</Button>
-          </Form>
         </Container>
       </Navbar>
     </div>
