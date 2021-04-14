@@ -1,9 +1,10 @@
 import React from "react";
+import LitofaniasInfo from "./litofanias/LitofaniasInfo";
 
 const Litofanias = () => {
   return (
     <div>
-      <h1>Desde las litofanias</h1>
+      <LitofaniasInfo />
     </div>
   );
 };

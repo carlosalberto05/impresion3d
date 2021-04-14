@@ -1,0 +1,10 @@
+/* Home carousel */
+/* .jm-carousel {
+  background-color: white;
+  padding-top: 0;
+} */
+
+.carousel-item {
+  width: 100%;
+  height: 550px;
+}

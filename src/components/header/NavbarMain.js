@@ -15,7 +15,7 @@ const NavbarMain = () => {
       <Navbar bbg="light" variant="light">
         <Container>
           <Link className="navbar-brand" to="/">
-            Impresion 3D
+            Inova3D
           </Link>
 
           <Nav className="mr-auto">

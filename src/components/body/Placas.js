@@ -1,9 +1,10 @@
 import React from "react";
+import PlacasInfo from "./placas/PlacasInfo";
 
 const Placas = () => {
   return (
     <div>
-      <h1>Desde las placas</h1>
+      <PlacasInfo />
     </div>
   );
 };
