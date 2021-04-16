@@ -4,7 +4,21 @@
   padding-top: 0;
 } */
 
+/* Carrusel se encuentra en la carpeta Inicio */
 .carousel-item {
   width: 100%;
   height: 550px;
+}
+
+@media (max-width: 600px) {
+  /* Carrusel para dispositivos moviles */
+  .carousel-item {
+    width: 100%;
+    height: 25vh;
+  }
+
+  .galeria-card {
+    display: inline-block;
+    width: 50%;
+  }
 }

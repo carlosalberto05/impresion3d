@@ -1,27 +1,22 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
 const NavbarMain = () => {
   return (
-    <div>
-      <Navbar bbg="light" variant="light">
-        <Container>
-          <Link className="navbar-brand" to="/">
+    <Navbar expand="lg" bg="light" variant="light">
+      <Container>
+        <Navbar.Brand>
+          <Link className="navbar-brand  font-weight-bold h5 mr-5 " to="/">
             Inova3D
           </Link>
-
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <NavLink
               activeClassName="active"
-              className="nav-item nav-link"
+              className="nav-item nav-link h5 mr-5 "
               exact
               to="/litofanias"
             >
@@ -30,7 +25,7 @@ const NavbarMain = () => {
 
             <NavLink
               activeClassName="active"
-              className="nav-item nav-link"
+              className="nav-item nav-link h5 mr-5 "
               exact
               to="placas"
             >
@@ -39,16 +34,16 @@ const NavbarMain = () => {
 
             <NavLink
               activeClassName="active"
-              className="nav-item nav-link"
+              className="nav-item nav-link h5 mr-5 "
               exact
               to="otros"
             >
               Otros
             </NavLink>
           </Nav>
-        </Container>
-      </Navbar>
-    </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

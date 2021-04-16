@@ -5,13 +5,18 @@ import { galeria } from "../../../data/galeria";
 const Galeria = () => {
   const [imagen, setImagen] = useState([]);
   const [show, setShow] = useState(false);
-  console.log(imagen.id);
+  // const [file, setFile] = useState(false);
 
   const handleShow = (id) => {
     const arrayFiltrado = galeria.filter((item) => item.id === id);
     setImagen(...arrayFiltrado);
+    console.log(...arrayFiltrado);
     setShow(true);
   };
+
+  // const kindFile = (id) => {
+
+  // }
 
   const handleClose = () => {
     setShow(false);
@@ -24,10 +29,11 @@ const Galeria = () => {
         <CardColumns>
           {galeria.map(({ id }) => {
             return (
-              <Card key={id}>
+              <Card key={id} className="galeria-card">
                 <Card.Img
                   variant="top"
                   src={`../../../assets/galeria/${id}.jpg`}
+                  // src={file ? `../../../assets/galeria/${id}.jpg` : }
                   onClick={() => handleShow(id)}
                 />
               </Card>

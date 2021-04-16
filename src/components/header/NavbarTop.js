@@ -5,7 +5,6 @@ import {
   faFacebookMessenger,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const NavbarTop = () => {
   return (
